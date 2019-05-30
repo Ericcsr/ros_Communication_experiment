@@ -22,12 +22,24 @@
 ![Result Diagram 2.1](/communication_exp/ros_bw/result.png)
 #### Illustration:
   * The test data is gathered from device running master node the talker and listener code are obtained from ros official tutorial and modified to maximize the data transmit quantity (A string with size of 1,600,000 character) for stress test Code Link: **To be Uploaded** , as it mentioned above and shown in diagram 2.1 the "Blocked means the TX 1's wifi antenna is removed and the signal quality decreased from 866mb/s to 175mb/s" which simulate real senario where some robot nodes are under signal inteference or distrubuted in further distance.
-    1. As its is shown in senario 2, The master Node play the same role as talker while the rest two node are listener can obtain best communication band width. Since the communication is one way without a intermedia. As shown in diagram 2.2.
+    1. As it is shown in senario 2, The master Node play the same role as talker while the rest two node are listener can obtain best communication band width. Since the communication is one way without a intermedia. As shown in diagram 2.2.
     ![Diagram2.2](/communication_exp/io_diagrams/Diagram2.2.jpg)
     #### Architecture Diagram 2.2
-    1. As its is shown in senario 1 and senario 3. The maximum transmitting rate stay roughly 1.5 - 1.7 mb/s where senario 1 has slightly better performance. The diagram 2.3 shows the architecture of senario 1.
+    1. As it is shown in senario 1 and senario 3. The maximum transmitting rate stay roughly 1.5 - 1.7 mb/s where senario 1 has slightly better performance. The diagram 2.3 shows the architecture of senario 1.
     #### Architecture Diagram 2.3
     ![Diagram2.3](/communication_exp/io_diagrams/Diagram2.3.jpg)
-    1. In the controlled group
-  
+    1. In the controlled group a TX 1 is running master node as well as talker and listener node in the same time the communication band width is as low as senario three where the 
+### 3. Communication Frequncy under ~~Three~~ different senarios:
+#### Variable Two: Communication Architecture and Signal Strength:
+####                      Result Diagram 3.1
+![Result Diagram 3.1](/communication_exp/ros_hz/result.png)
+#### Illustration:
+  * The test senario architecture and data obtain procedure are identical to previous section. The test data is string "1" with transmitting frenquncy set to 100000 hz (Far higher the the physical limit)
+  1. As it is shown in diagram 3.1 the architecture as shown in 2.3 has the best perfromance in transmitting frequncy, up to over 1,200 hz.
+  1. When facing small dataset and high frequncy, the brand width only reached approximately 60kb/s. It is unlikely to be contrain by LAN connection as measure in previous experiment.
+  1. In architecture shown in 2.2 the signal strength has almost no influence on frequncy. While the talker node's frequency is likely to be affected by other runing node number and jobs like master and listener. The result in controled group furtherly proved this hypothsis.
+## Conclusion:
+    * Unstable and period ping delay has high possbility to be related with wifi module itself. Significant delay with average time to be 0.1 second might negatively affect algorithm behavior in a multi-robots system require real time reaction.
+    * Band width during communication can be affected by signal quality as well as communication architecture less sides in communication graph with better signal quality can result in better communication brand width.
+    * The communication frequncy is not likely to be affected by WLAN connection reason even under poor signal quality since when achieve highest frequncy the band width of communication topic is far less than the physical limit tested in experiment 2. However, the number of nodes run on one devices can influence the communication frequncy maybe due to operating system thread and computation ability arrangement and limit reason. When design a node with high requirement of communication frequncy, performance can be improved by distribute other node on different machines.
   
