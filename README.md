@@ -23,11 +23,11 @@
 #### Illustration:
   * The test data is gathered from device running master node the talker and listener code are obtained from ros official tutorial and modified to maximize the data transmit quantity (A string with size of 1,600,000 character) for stress test Code Link: **To be Uploaded** , as it mentioned above and shown in diagram 2.1 the "Blocked means the TX 1's wifi antenna is removed and the signal quality decreased from 866mb/s to 175mb/s" which simulate real senario where some robot nodes are under signal inteference or distrubuted in further distance.
     1. As its is shown in senario 2, The master Node play the same role as talker while the rest two node are listener can obtain best communication band width. Since the communication is one way without a intermedia. As shown in diagram 2.2.
-    ![Diagram2.2](/communication_exp/io_diagram/Diagram2.2)
+    ![Diagram2.2](/communication_exp/io_diagram/Diagram2.2.jpg)
     #### Architecture Diagram 2.2
     1. As its is shown in senario 1 and senario 3. The maximum transmitting rate stay roughly 1.5 - 1.7 mb/s where senario 1 has slightly better performance. The diagram 2.3 shows the architecture of senario 1.
     #### Architecture Diagram 2.3
-    ![Diagram2.3](/communication_exp/io_diagram/Diagram2.3)
+    ![Diagram2.3](/communication_exp/io_diagram/Diagram2.3.jpg)
     1. In the controlled group
   
   
