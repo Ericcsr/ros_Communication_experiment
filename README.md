@@ -1,4 +1,4 @@
-# Report Of Ros Communication Experiment
+# Report of ROS Communication Experiment
 ## Introduction:
   Communication Between different Robot (*Node*) is essential in multirobots system. In simulated condition each robots can communicate with other robots easily without worrying **Time Delay** and **Lost Bags** due to bad communiction condition i.e.: Weak Signal or Signal interference. In real condition while the signal quality cannot be on hundred percent guaranteed, **Time delay** and **lost bags** might lead to catastrophic consequnce i.e.: Robot collision or ineffective movement due to out of day position information. This Report illustrate ros commuication result in physical world as well as derived reasoning and suggestions to properly implement ros communication in a multi-robots system.
 ## Experiment Enviorment:
