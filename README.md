@@ -8,7 +8,7 @@
    #### Variable One: Distance Between Wi-Fi Router:
   ![**Result Diagram 1.1**](/communication_exp/ping_delay/result.png)
   ![**Result Diagram 1.2**](/communication_exp/ping_delay/wireless_vs_wired.png)
-  ####Illustration: 
+   ####Illustration: 
   The test data is gathered from Desktop PC running Linux 16.04 connected to the Local Area Network through wire. The time delay when ping itself is ignorable and can refer to Wired Control group shows in Diagram 1.2.
    > **1.** As it is shown in diagram 1.1 the distance factor plays a trivial role in affecting ping delay of different node.
    > **2.** However, the delay varies significantly between approximately 30ms to approximately 280ms, the variation is periodic
