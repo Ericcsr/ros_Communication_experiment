@@ -6,12 +6,15 @@
 ## Condition Statement and Experiment Result:
 ### Time Delay Between Different Node:
 #### Variable One: Distance Between Wi-Fi Router:
+####                        Result Diagram 1.1
 ![**Result Diagram 1.1**](/communication_exp/ping_delay/result.png)
+####                        Result Diagram 1.2
 ![**Result Diagram 1.2**](/communication_exp/ping_delay/wireless_vs_wired.png)
 #### Illustration: 
    * The test data is gathered from Desktop PC running Linux 16.04 connected to the Local Area Network through wire. The time delay      * when ping itself is ignorable and can refer to Wired Control group shows in Diagram 1.2.
    1. As it is shown in diagram 1.1 the distance factor plays a trivial role in affecting ping delay of different node.
-   1. However, the delay varies significantly between approximately 30ms to approximately 280ms, the variation is periodic
-      1. Reason analysis: By comparing ping devices running different operating system (Linux: Android(Huawei P20 Pro); Linux:    Raspbian(Raspberry pi 3b+); Window 10 (Huawei Matebook d); IOS 12 (ipad);Ubuntu 16.04 on Jetson Tx 1 and Huawei Matebook d and raspberry pi), as well as comparing divices with different Wi-Fi embedded module: (Ubuntu 16.04 using Intel Dual band Wi-Fi ac 8265; Ubuntu 16.04 using Cypress CYW43455; Ubuntu 16.04 using Cypress CYW4354); The difference in Wi-Fi module proves to be most influential on ping delay and delay pattern. While module using Intel Dual band Wi-Fi ac 8265 and Cypress CYW4354 has ping delay averagely 5ms 
+   1. However, the delay varies significantly between approximately 30ms to approximately 280ms, the variation is periodic:
+      1. **Reason analysis**: By comparing ping devices running different operating system (Linux: Android(Huawei P20 Pro); Linux:    Raspbian(Raspberry pi 3b+); Window 10 (Huawei Matebook d); IOS 12 (ipad);Ubuntu 16.04 on Jetson Tx 1 and Huawei Matebook d and raspberry pi), as well as comparing divices with different Wi-Fi embedded module: (Ubuntu 16.04 using Intel Dual band Wi-Fi ac 8265; Ubuntu 16.04 using Cypress CYW43455; Ubuntu 16.04 using Cypress CYW4354); The difference in Wi-Fi module proves to be most influential on ping delay and delay pattern. While module using Intel Dual band Wi-Fi ac 8265 and Cypress CYW4354 has ping delay averagely 5ms.
+      1. **Improvement** :If the real time requirement is important in a multi-robot system. The factor of transmitting chip and hardware generated delay need to be considered.
   
   
