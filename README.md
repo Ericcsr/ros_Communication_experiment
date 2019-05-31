@@ -16,7 +16,7 @@
     2. However, the delay varies significantly between approximately 30ms to approximately 280ms, the variation is periodic:
       3. **Reason analysis**: By comparing ping devices running different operating system (Linux: Android(Huawei P20 Pro); Linux:    Raspbian(Raspberry pi 3b+); Window 10 (Huawei Matebook d); IOS 12 (ipad);Ubuntu 16.04 on Jetson Tx 1 and Huawei Matebook d and raspberry pi), as well as comparing divices with different Wi-Fi embedded module: (Ubuntu 16.04 using Intel Dual band Wi-Fi ac 8265; Ubuntu 16.04 using Cypress CYW43455; Ubuntu 16.04 using Cypress CYW4354); The difference in Wi-Fi module proves to be most influential on ping delay and delay pattern. While module using Intel Dual band Wi-Fi ac 8265 and Cypress CYW4354 has ping delay averagely 5ms.
       4. **Improvement** :If the real time requirement is important in a multi-robot system. The factor of transmitting chip and hardware generated delay need to be considered.
-### 2.Communication Band Width Under ~~Three~~ different senarios:
+### 2.Communication Band Width Under Three different senarios:
 #### Variable Two: Communication Architecture and Signal Strength:
 ####                       Result Diagram 2.1
 ![Result Diagram 2.1](/communication_exp/ros_bw/result.png)
@@ -36,7 +36,7 @@
     #### Diagram 2.6
     ![Diagram2.6](/communication_exp/ros_bw/bare_compare.png)
     5. Noticed that when node is running on separated machine the communication band width performance actually better, because of distrubution of computation workload.
-### 3. Communication Frequncy under ~~Three~~ different senarios:
+### 3. Communication Frequncy under Three different senarios:
 #### Variable Two: Communication Architecture and Signal Strength:
 ####                      Result Diagram 3.1
 ![Result Diagram 3.1](/communication_exp/ros_hz/result.png)
