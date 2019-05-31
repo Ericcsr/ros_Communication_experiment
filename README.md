@@ -28,7 +28,14 @@
     1. As it is shown in senario 1 and senario 3. The maximum transmitting rate stay roughly 1.5 - 1.7 mb/s where senario 1 has slightly better performance. The diagram 2.3 shows the architecture of senario 1.
     #### Architecture Diagram 2.3
     ![Diagram2.3](/communication_exp/io_diagrams/Diagram2.3.jpg)
-    1. In the controlled group a TX 1 is running master node as well as talker and listener node in the same time the communication band width is as low as senario three where the 
+    1. In the controlled group a TX 1 is running master node as well as talker and listener node in the same time the communication band width is as low as senario three, inspection on the cpu occupation indicates that the when three nodes are running on the same machine over 80% of computing power are distributed to gnome and after redirect the output of talker and listener node to file. CPU occupation decreased significantly. Also, another issue that lead to decrease on communication brandwidth might be python's file write execution, after turn off the file manipulation part in testing code the performance of communication band width and frequncy improved significantly. Diagram 2.4 -2.6 shows the result of it.
+    #### Diagram 2.4
+    ![Diagram2.4](/communication_exp/ros_bw/bare_test_result.png)
+    #### Diagram 2.5
+    ![Diagram2.5](/communication_exp/ros_bw/bare_control_result.png)
+    #### Diagram 2.6
+    ![Diagram2.6](/communication_exp/ros_bw/bare_compare.png)
+    1. Noticed that when node is running on separated machine the communication band width performance actually better, because of distrubution of computation workload.
 ### 3. Communication Frequncy under ~~Three~~ different senarios:
 #### Variable Two: Communication Architecture and Signal Strength:
 ####                      Result Diagram 3.1
